@@ -28,7 +28,7 @@ namespace Axmetshin41
         {
             get
             {
-                return Convert.ToInt32(this.ProductCost);
+                return Convert.ToInt32(this.ProductCost); 
             }
         }
         public int ProductMaxDiscount { get; set; }
