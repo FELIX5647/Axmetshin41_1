@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,8 +67,41 @@
     <Compile Include="AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Axmetshin41.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Axmetshin41.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Axmetshin41.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Axmetshin41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Axmetshin41.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PickUpPoint.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Axmetshin41.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -101,6 +143,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Axmetshin41.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Axmetshin41.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Axmetshin41.edmx.diagram">
+      <DependentUpon>Axmetshin41.edmx</DependentUpon>
+    </None>
+    <None Include="image\Thumbs.db" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +165,34 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\B320R5.jpg" />
+    <Resource Include="image\D329H3.jpg" />
+    <Resource Include="image\D572U8.jpg" />
+    <Resource Include="image\F572H7.jpg" />
+    <Resource Include="image\F635R4.jpg" />
+    <Resource Include="image\G432E4.jpg" />
+    <Resource Include="image\G783F5.jpg" />
+    <Resource Include="image\H782T5.jpg" />
+    <Resource Include="image\J384T6.jpg" />
+    <Resource Include="image\А112Т4.jpg" />
+    <Resource Include="res\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Axmetshin41.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Axmetshin41.edmx</DependentUpon>
+      <LastGenOutput>Axmetshin41.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Axmetshin41.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Axmetshin41.edmx</DependentUpon>
+      <LastGenOutput>Axmetshin41.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
